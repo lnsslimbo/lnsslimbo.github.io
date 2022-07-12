@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>RHCA学习笔记|RH358 | The place of trash</title><meta name="author" content="LNSS"><meta name="copyright" content="LNSS"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="江枫渔火对愁眠">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>RHCA学习笔记|RH358 | The place of trash</title><meta name="author" content="LNSS"><meta name="copyright" content="LNSS"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Red Hat Services Management and Automation  Service &#x2F; RHCE7  man –help   Ansible &#x2F; RHCE8  https:&#x2F;&#x2F;docs.ansible.com&#x2F;ansible&#x2F;2.8&#x2F;index.html#  keywords name hosts tasks vars loop(for)   Module">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RHCA学习笔记|RH358">
 <meta property="og:url" content="https://lnsslimbo.github.io/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH358/index.html">
 <meta property="og:site_name" content="The place of trash">
-<meta property="og:description" content="江枫渔火对愁眠">
+<meta property="og:description" content="Red Hat Services Management and Automation  Service &#x2F; RHCE7  man –help   Ansible &#x2F; RHCE8  https:&#x2F;&#x2F;docs.ansible.com&#x2F;ansible&#x2F;2.8&#x2F;index.html#  keywords name hosts tasks vars loop(for)   Module">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png">
 <meta property="article:published_time" content="2022-07-12T10:52:40.000Z">
-<meta property="article:modified_time" content="2022-07-12T10:52:40.600Z">
+<meta property="article:modified_time" content="2022-07-12T10:54:01.552Z">
 <meta property="article:author" content="LNSS">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://lnsslimbo.github.io/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH358/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
@@ -51,8 +51,8 @@
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2022-07-12 18:52:40'
+  isToc: true,
+  postUpdate: '2022-07-12 18:54:01'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -141,7 +141,1123 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/lnsslimbo/cdn@img%2Bvideo/blogimg/lnss.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">The place of trash</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">RHCA学习笔记|RH358</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-12T10:52:40.000Z" title="发表于 2022-07-12 18:52:40">2022-07-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-12T10:52:40.600Z" title="更新于 2022-07-12 18:52:40">2022-07-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="RHCA学习笔记|RH358"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://lnsslimbo.github.io">LNSS</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lnsslimbo.github.io/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH358/">https://lnsslimbo.github.io/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH358/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lnsslimbo.github.io" target="_blank">The place of trash</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-DO447/"><img class="next-cover" src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">RHCA学习笔记|DO447</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/lnsslimbo/cdn@img%2Bvideo/blogimg/lnss.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LNSS</div><div class="author-info__description">江枫渔火对愁眠</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lnsslimbo"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">可知岁月|敬浮生</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH358/" title="RHCA学习笔记|RH358"><img src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RHCA学习笔记|RH358"/></a><div class="content"><a class="title" href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH358/" title="RHCA学习笔记|RH358">RHCA学习笔记|RH358</a><time datetime="2022-07-12T10:52:40.000Z" title="发表于 2022-07-12 18:52:40">2022-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-DO447/" title="RHCA学习笔记|DO447"><img src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RHCA学习笔记|DO447"/></a><div class="content"><a class="title" href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-DO447/" title="RHCA学习笔记|DO447">RHCA学习笔记|DO447</a><time datetime="2022-07-12T10:52:32.000Z" title="发表于 2022-07-12 18:52:32">2022-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-CL210/" title="RHCA学习笔记|CL210"><img src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RHCA学习笔记|CL210"/></a><div class="content"><a class="title" href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-CL210/" title="RHCA学习笔记|CL210">RHCA学习笔记|CL210</a><time datetime="2022-07-12T10:52:23.000Z" title="发表于 2022-07-12 18:52:23">2022-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/RHCE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH294/" title="RHCE学习笔记|RH294"><img src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RHCE学习笔记|RH294"/></a><div class="content"><a class="title" href="/2022/07/12/RHCE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH294/" title="RHCE学习笔记|RH294">RHCE学习笔记|RH294</a><time datetime="2022-07-12T10:46:05.000Z" title="发表于 2022-07-12 18:46:05">2022-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/RHCE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH134/" title="RHCE学习笔记|RH134"><img src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RHCE学习笔记|RH134"/></a><div class="content"><a class="title" href="/2022/07/12/RHCE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH134/" title="RHCE学习笔记|RH134">RHCE学习笔记|RH134</a><time datetime="2022-07-12T10:45:31.000Z" title="发表于 2022-07-12 18:45:31">2022-07-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By LNSS</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/lnsslimbo/cdn@img%2Bvideo/blogimg/lnss.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">The place of trash</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">RHCA学习笔记|RH358</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-12T10:52:40.000Z" title="发表于 2022-07-12 18:52:40">2022-07-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-12T10:54:01.552Z" title="更新于 2022-07-12 18:54:01">2022-07-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="RHCA学习笔记|RH358"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Red-Hat-Services-Management-and-Automation"><a href="#Red-Hat-Services-Management-and-Automation" class="headerlink" title="Red Hat Services Management and Automation"></a>Red Hat Services Management and Automation</h1><blockquote>
+<ul>
+<li><p>Service &#x2F; RHCE7</p>
+<ul>
+<li>man</li>
+<li>–help</li>
+</ul>
+</li>
+<li><p>Ansible &#x2F; RHCE8</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://docs.ansible.com/ansible/2.8/index.html#">https://docs.ansible.com/ansible/2.8/index.html#</a></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.ansible.com/ansible/2.9/reference_appendices/playbooks_keywords.html">keywords</a><ul>
+<li>name</li>
+<li>hosts</li>
+<li>tasks</li>
+<li>vars</li>
+<li>loop(for)</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://docs.ansible.com/ansible/2.9/modules/modules_by_category.html">Module Index</a></li>
+</ul>
+</li>
+<li><p>ansible-doc</p>
+<ul>
+<li>&#96;&#96;&#96;bash<br>$ ansible-doc -l | grep KEYWORD<br>$ ansible-doc MODULE-NAME<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">本课程基于</span><br><span class="line"></span><br><span class="line">- 红帽 Ansible 引擎 2.9</span><br><span class="line"></span><br><span class="line">- 红帽企业 Linux 8.1</span><br><span class="line"></span><br><span class="line">**[kiosk@foundation]**</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">$ ls /content/courses/rh358/rhel8.1/grading-scripts/</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="1-管理网络服务"><a href="#1-管理网络服务" class="headerlink" title="1 管理网络服务"></a>1 管理网络服务</h2><blockquote>
+<ul>
+<li>Systemd回顾</li>
+<li>NetworkManager回顾</li>
+<li>自动化配置服务和网络接口</li>
+</ul>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">-RHEL&gt;=7 /pid=1=systemd</span><br><span class="line"><span class="comment"># systemctl list-unit-files | grep KEYWORD</span></span><br><span class="line"><span class="comment"># systemctl status KEYWORD</span></span><br><span class="line"></span><br><span class="line">* <span class="comment"># systemctl enable --now DAEMON</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># systemctl enable DAEMON</span></span><br><span class="line">* <span class="comment"># systemctl restart DAEMON</span></span><br><span class="line"><span class="comment"># systemctl status DAEMON</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># systemctl get-default</span></span><br><span class="line"><span class="comment"># systemctl -t target</span></span><br><span class="line">-CLI</span><br><span class="line"><span class="comment"># systemctl isolate multi-user.target		# init 3</span></span><br><span class="line">-GUI</span><br><span class="line"><span class="comment"># systemctl isolate graphical.target		# init 5</span></span><br><span class="line"><span class="comment"># systemctl set-default multi-user.target</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># systemctl list-dependencies graphical.target  | grep target</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># systemctl status crond.service </span></span><br><span class="line"><span class="comment"># systemctl stop crond.service </span></span><br><span class="line"><span class="comment"># systemctl mask crond.service </span></span><br><span class="line"><span class="comment"># systemctl is-active crond.service </span></span><br><span class="line"><span class="comment"># systemctl start crond</span></span><br><span class="line"><span class="comment"># systemctl unmask crond.service </span></span><br><span class="line"><span class="comment"># systemctl start crond</span></span><br><span class="line"><span class="comment"># systemctl is-active crond.service</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Controlling-Network-Services"><a href="#Controlling-Network-Services" class="headerlink" title="Controlling Network Services"></a><strong>Controlling Network Services</strong></h4><blockquote>
+<ul>
+<li><p><strong>doc</strong></p>
+<p># grep -r BOOPRO &#x2F;usr&#x2F;share<br># vim &#x2F;usr&#x2F;share&#x2F;doc&#x2F;initscripts&#x2F;sysconfig.txt</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">USERCTL</span>=<span class="literal">yes</span>|<span class="literal">no</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>man</strong><br># man -k ifcfg<br># man nm-settings-ifcfg-rh</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>[student@workstation ~]</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lab servicemgmt-netservice start</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>[root@workstation]</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># systemctl status chronyd</span></span><br><span class="line"><span class="comment"># systemctl restart chronyd</span></span><br><span class="line"><span class="comment"># systemctl status chronyd</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>[root@servera]</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># systemctl status chronyd</span></span><br><span class="line"><span class="comment"># systemctl start chronyd</span></span><br><span class="line"><span class="comment"># systemctl status chronyd</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># systemctl is-enabled chronyd</span></span><br><span class="line"><span class="comment"># reboot</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># systemctl is-active chronyd</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>[student@workstation ~]</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lab servicemgmt-netservice finish</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Configuring-Network-Interfaces"><a href="#Configuring-Network-Interfaces" class="headerlink" title="Configuring Network Interfaces"></a><strong>Configuring Network Interfaces</strong></h4><blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ MANWIDTH=120 man nmcli | grep nmcli.*add</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>[student@workstation ~]</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lab servicemgmt-netreview start</span><br></pre></td></tr></table></figure>
+
+<p><strong>[root@servera]</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ip link</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># nmcli con show</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># nmcli con add con-name eth1 \</span></span><br><span class="line"><span class="built_in">type</span> ethernet \</span><br><span class="line">ifname eth1</span><br><span class="line"></span><br><span class="line"><span class="comment"># nmcli con show</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># nmcli con mod eth1 ipv4.addresses 192.168.0.1/24 \</span></span><br><span class="line">ipv4.method manual</span><br><span class="line"><span class="comment"># cat /etc/sysconfig/network-scripts/ifcfg-eth1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># nmcli con up eth1</span></span><br><span class="line"><span class="comment"># ip addr show dev eth1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ping -c 2 192.168.0.1</span></span><br><span class="line"><span class="comment"># echo $?</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ip route</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># cat /etc/resolv.conf</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>[student@workstation ~]</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lab servicemgmt-netreview finish</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="指导练习-自动化配置服务和网络接口"><a href="#指导练习-自动化配置服务和网络接口" class="headerlink" title="指导练习: 自动化配置服务和网络接口"></a><strong style='color: #1A97D5'>指导练习: 自动化配置服务和网络接口</strong></h4><blockquote>
+<ul>
+<li>roles:<br>- rhel-system-roles.<code>network</code> </li>
+<li>-m <code>shell</code> -a ‘nmcli …’</li>
+<li>-m <code>nmcli</code> -a ‘…’                            # pkg</li>
+</ul>
+</blockquote>
+<hr>
+<p><strong>[student@workstation]</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lab servicemgmt-automation start</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ansible-playbook confignet.yml</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>[student@workstation]</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lab servicemgmt-automation finish</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-配置网络聚合-配置网络Team"><a href="#2-配置网络聚合-配置网络Team" class="headerlink" title="2 配置网络聚合 配置网络Team"></a>2 配置网络聚合 配置网络Team</h2><blockquote>
+<ul>
+<li>管理网络Team</li>
+<li>自动化网络Team</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>带外管理，vnc</p>
+</blockquote>
+<blockquote>
+<p>VIP - [ eth0 + eth1 ]</p>
+<p>RHEL&lt;&#x3D;6 <code>bond</code>, RHEL&gt;&#x3D;7 <code>team</code></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># man -k nmcli</span></span><br><span class="line"><span class="comment"># man nmcli-examples | grep -A 2 nmcli.*team</span></span><br><span class="line">  $ nmcli con add <span class="built_in">type</span> team con-name `Team1` ifname `Team1` config `team1-master-json.conf`</span><br><span class="line">  $ nmcli con add <span class="built_in">type</span> ethernet con-name Team1-slave1 ifname `em1` master `Team1`</span><br><span class="line">  $ nmcli con add <span class="built_in">type</span> ethernet con-name Team1-slave2 ifname `em2` master `Team1`</span><br><span class="line">  </span><br><span class="line"><span class="comment"># man -k team</span></span><br><span class="line"><span class="comment"># man teamd.conf | grep backup</span></span><br><span class="line">  <span class="string">&quot;runner&quot;</span>: &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;activebackup&quot;</span>&#125;,</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-RHEL=7</span><br><span class="line"><span class="comment"># nmcli con add \</span></span><br><span class="line"><span class="built_in">type</span> team \</span><br><span class="line">con-name Team1 \</span><br><span class="line">ifname Team1 \</span><br><span class="line">config <span class="string">&#x27;&quot;runner&quot;: &#123;&quot;name&quot;: &quot;activebackup&quot;&#125;&#x27;</span></span><br><span class="line"></span><br><span class="line">-RHEL=8</span><br><span class="line"><span class="comment"># nmcli con add type team con-name Team1 ifname Team1 team.runner activebackup</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># nmcli con add type ethernet con-name Team1-slave1 ifname eth1 master Team1</span></span><br><span class="line"><span class="comment"># nmcli con add type ethernet con-name Team1-slave2 ifname eth2 master Team1</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># nmcli dev status </span></span><br><span class="line"><span class="comment"># ls /etc/sysconfig/network-scripts/ifcfg-*</span></span><br><span class="line"><span class="comment"># nmcli connection up Team1-slave1</span></span><br><span class="line"><span class="comment"># nmcli connection up Team1-slave2</span></span><br><span class="line"><span class="comment"># nmcli dev status </span></span><br><span class="line"><span class="comment"># cat -n /etc/sysconfig/network-scripts/ifcfg-Team1</span></span><br><span class="line"><span class="comment"># man nmcli | grep nmcli.*mod</span></span><br><span class="line"><span class="comment"># nmcli connection mod Team1 ipv4.method manual ipv4.addresses 10.1.1.1/8</span></span><br><span class="line"><span class="comment"># nmcli connection up Team1</span></span><br><span class="line"><span class="comment"># ip a s | grep -w inet</span></span><br><span class="line"><span class="comment"># ping -c 4 10.1.1.1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># teamdctl Team1 state</span></span><br><span class="line"><span class="comment"># nmcli connection down Team1-slave1</span></span><br><span class="line"><span class="comment"># teamdctl Team1 state</span></span><br><span class="line"><span class="comment"># ping -c 4 10.1.1.1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-管理DNS和DNS服务器"><a href="#3-管理DNS和DNS服务器" class="headerlink" title="3 管理DNS和DNS服务器"></a>3 管理DNS和DNS服务器</h2><h3 id="DNS（domain-name-system）概念"><a href="#DNS（domain-name-system）概念" class="headerlink" title="DNS（domain name system）概念"></a>DNS（domain name system）概念</h3><ul>
+<li><p>早期使用hosts文件解析域名</p>
+<p>具有主机名称重复、维护困难等困难</p>
+</li>
+<li><p>使用分布式&#x2F;层次性较强的DNS解决调度时，高并发也不会出现问题</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">8.8.8.8</span><br><span class="line">114.114.114.114</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="DNS作用"><a href="#DNS作用" class="headerlink" title="DNS作用"></a>DNS作用</h3><ul>
+<li><p>正向解析：根据主机名称（域名）查找对应ip</p>
+</li>
+<li><p>反向解析：根据ip查找对应的主机域名</p>
+</li>
+</ul>
+<h3 id="域名空间机构"><a href="#域名空间机构" class="headerlink" title="域名空间机构"></a>域名空间机构</h3><p>分布式&#x2F;层次性的体现</p>
+<blockquote>
+<p><code>.</code> 根域</p>
+<p><code>com.</code> 顶级域（包括 组织域.org、国家域&#x2F;地区域、反向域）</p>
+<p><code>mi.com.</code>	二级域</p>
+<p><code>mail.mi.com.</code>	三级域（或主机名）</p>
+<blockquote>
+<p>如果顶级域不算的话，往下就是一级域二级域。</p>
+</blockquote>
+<p>主机名.DNS后缀 &#x3D; FQDN（完全合格域名）</p>
+<p>如：FQDN	<a target="_blank" rel="noopener" href="http://www.mi.com/">www.mi.com</a>.</p>
+</blockquote>
+<h3 id="DNS查询过程"><a href="#DNS查询过程" class="headerlink" title="DNS查询过程"></a>DNS查询过程</h3><blockquote>
+<p>DNS解析</p>
+<ul>
+<li>递归查询，一级一级查找</li>
+<li>迭代查询，并行</li>
+</ul>
+</blockquote>
+<h3 id="DNS查询过程-1"><a href="#DNS查询过程-1" class="headerlink" title="DNS查询过程"></a>DNS查询过程</h3><blockquote>
+<p>从查询方式上分：</p>
+<ul>
+<li>递归查询：客户端得到结果只能是成功或失败</li>
+<li>迭代查询：服务器以最佳结果作答</li>
+</ul>
+<p>从查询内容上分：</p>
+<ul>
+<li>正向查询：由域名查找IP</li>
+<li>反向查询：由IP查找域名</li>
+</ul>
+</blockquote>
+<h3 id="DNS资源记录"><a href="#DNS资源记录" class="headerlink" title="DNS资源记录"></a>DNS资源记录</h3><blockquote>
+</blockquote>
+<blockquote>
+<ul>
+<li>&#x2F;etc&#x2F;hosts</li>
+<li>&#x2F;etc&#x2F;resolv.conf</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>描述DNS服务</li>
+<li>使用Unbound配置缓存名称服务器</li>
+<li>排故DNS问题<ul>
+<li><strong>host</strong> <a target="_blank" rel="noopener" href="http://www.mi.com/">www.mi.com</a>,<br>host 172.25.254.250 172.25.254.254</li>
+<li>nslookup <a target="_blank" rel="noopener" href="http://www.mi.com/">www.mi.com</a>,<br>nslookup 172.25.254.250  172.25.254.254</li>
+<li>dig <a target="_blank" rel="noopener" href="http://www.mi.com/">www.mi.com</a> ,<br>dig -x 172.25.254.250  @172.25.254.254</li>
+</ul>
+</li>
+<li>:triangular_flag_on_post: 使用BIND 9配置权威名称服务器</li>
+<li>自动化配置DNS</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">TYPE</th>
+<th align="center">主配置文件*2</th>
+<th align="center">区域文件（正向|反向）*2</th>
+<th align="center">operation</th>
+<th align="center">PKG</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center"><strong>Master</strong></td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">edit</td>
+<td align="center">bind</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Slave</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">copy</td>
+<td align="center">bind</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Cache</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">-</td>
+<td align="center">unbound</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Forward</td>
+<td align="center">Y</td>
+<td align="center">N</td>
+<td align="center">-</td>
+<td align="center">bind</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>$ hostname -s<kbd>Enter</kbd>	www</p>
+</blockquote>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ grep ^hosts /etc/nsswitch.conf</span><br><span class="line">hosts:      files dns myhostname</span><br><span class="line"></span><br><span class="line">- files = hosts</span><br><span class="line">- dns = resolve.conf</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>hosts<ul>
+<li>Linux, MacOS - &#x2F;etc&#x2F;hosts</li>
+<li>Windows - C:\windows\system32\drivers\etc\hosts</li>
+</ul>
+</li>
+<li>dns<ul>
+<li>permanent <ul>
+<li>$ nmcli con mod CN ipv4.dns 8.8.8.8</li>
+</ul>
+</li>
+<li>active <ul>
+<li>$ cat &#x2F;etc&#x2F;resolve.conf</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>:one: domain&#x2F;conf_file<em><strong>1</strong>	permission</em>2, file “example.com.localhost”;  ,file “25.172.loopback”; </p>
+<p>​		:two: zone&#x2F;zone_file*<strong>2</strong>	正向<code>lab.example.com.</code> ； 反向<code>25.172.in-addr.arpa.</code></p>
+<p>​				:three: recorder<br>​							hostname	<code>A	</code> ip	                    主机名解析成IP地址；<br>​							rever<!--se hid `PTR` hostna-->me    IP 地址解析成主机名</p>
+<p>​											<code>SOA</code> &#x3D; <code>NS</code> &#x3D; servera.lab.example.com<code>.</code></p>
+</blockquote>
+<p><img src="https://gitee.com/suzhen99/redhat/raw/master/images/dns-lookups.svg" alt="dns-lookups"></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">x:\&gt; <span class="title">ipconfig</span> /<span class="title">flushdns</span></span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">CLASS</th>
+<th align="center"></th>
+<th align="center">NID</th>
+<th align="center">HID</th>
+<th align="center">zone</th>
+<th align="center">PTR</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A</td>
+<td align="center">10.1.2.3&#x2F;8</td>
+<td align="center">10</td>
+<td align="center">1.2.3</td>
+<td align="center">10.in-addr.arpa.</td>
+<td align="center">3.2.1</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">172.25.254.9&#x2F;16</td>
+<td align="center">172.25</td>
+<td align="center">254.9</td>
+<td align="center">25.172.in-addr.arpa.</td>
+<td align="center">9.254</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">192.168.9.10&#x2F;24</td>
+<td align="center">192.168.9</td>
+<td align="center">10</td>
+<td align="center">9.168.192.in-addr.arpa.</td>
+<td align="center">10</td>
+</tr>
+</tbody></table>
+<h2 id="4-管理DHCP和IP地址分配"><a href="#4-管理DHCP和IP地址分配" class="headerlink" title="4 管理DHCP和IP地址分配"></a>4 管理DHCP和IP地址分配</h2><blockquote>
+<ul>
+<li>:triangular_flag_on_post: 使用DHCP配置IPv4地址分配</li>
+<li>配置IPv6地址分配</li>
+<li>自动化配置DHCP</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>作用：分配网络参数，除了mac</p>
+<p>工作原理：客户端广播，从先应答的服务器获得IP</p>
+<p>协议：67&#x2F;UDP, 68&#x2F;UDP    <code>/etc/services</code></p>
+<p>场景：无线路由、PXE、网络Ghost</p>
+</blockquote>
+<h2 id="5-管理打印机和打印文件"><a href="#5-管理打印机和打印文件" class="headerlink" title="5 管理打印机和打印文件"></a>5 管理打印机和打印文件</h2><blockquote>
+<ul>
+<li>配置和管理打印机</li>
+<li>:triangular_flag_on_post: 自动化配置打印机</li>
+</ul>
+</blockquote>
+<h2 id="6-配置邮件传输"><a href="#6-配置邮件传输" class="headerlink" title="6 配置邮件传输"></a>6 配置邮件传输</h2><blockquote>
+<ul>
+<li>配置一个仅发送邮件服务器</li>
+<li>:triangular_flag_on_post: 自动配置Postfix</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Windows</th>
+<th align="center">Linux</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">MTA<br>Mail Transport Agent</td>
+<td align="center">Microssoft&#x2F;Exchange, <br>IBM&#x2F;Domino</td>
+<td align="center">RHEL8 <strong>postfix</strong><br>RHEL&lt;&#x3D;7 sendmail<br>qmail</td>
+<td align="center">邮局</td>
+</tr>
+<tr>
+<td align="center">MDA<br>mail delivery agents</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">邮递员</td>
+</tr>
+<tr>
+<td align="center">MUA<br>mail user agent</td>
+<td align="center">outlook, <br>foxmail</td>
+<td align="center">GUI: evolution, thunderbird<br>CLI: <strong>mail</strong>, <strong>mutt</strong></td>
+<td align="center">客户</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">PROTOCOL</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center">Package</th>
+<th align="center">PORT</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">smtp</td>
+<td align="center">发送</td>
+<td align="center"></td>
+<td align="center">postfix</td>
+<td align="center">25</td>
+</tr>
+<tr>
+<td align="center">imap</td>
+<td align="center">接收</td>
+<td align="center">同步sync</td>
+<td align="center">dovecot</td>
+<td align="center">143</td>
+</tr>
+<tr>
+<td align="center">pop3</td>
+<td align="center">接收</td>
+<td align="center">拷贝copy</td>
+<td align="center">dovecot</td>
+<td align="center">110</td>
+</tr>
+</tbody></table>
+<h2 id="7-配置MariaDB-SQL数据库"><a href="#7-配置MariaDB-SQL数据库" class="headerlink" title="7 配置MariaDB SQL数据库"></a>7 配置MariaDB SQL数据库</h2><blockquote>
+<ul>
+<li>:triangular_flag_on_post: 安装MariaDB数据库  </li>
+<li>:triangular_flag_on_post: MariaDB中SQL管理</li>
+<li>:triangular_flag_on_post: MariaDB用户和访问权限</li>
+<li>备份和:triangular_flag_on_post: 恢复MariaDB</li>
+<li>自动化部署MariaDB</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>mysql -&#x3D;&gt; mariadb</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">SQL</th>
+<th align="center">CMD（help CMD;）</th>
+<th align="center">COMMENT</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">DDL</td>
+<td align="center"><strong>create</strong>, alter, drop, <strong>show</strong>, use, DESCRIBE</td>
+<td align="center">数据定义语言（结构）</td>
+</tr>
+<tr>
+<td align="center">DML</td>
+<td align="center"><strong>select</strong>, insert, update, delete</td>
+<td align="center">数据操纵语言（内容）</td>
+</tr>
+<tr>
+<td align="center">DCL</td>
+<td align="center"><strong>grant</strong>, revoke</td>
+<td align="center">数据控制语言（权限）</td>
+</tr>
+</tbody></table>
+<h2 id="8-配置Web服务器"><a href="#8-配置Web服务器" class="headerlink" title="8 配置Web服务器"></a>8 配置Web服务器</h2><blockquote>
+<ul>
+<li>:triangular_flag_on_post: 使用Apache HTTPD配置一个基本Web服务器</li>
+<li>:triangular_flag_on_post:使用Apache HTTPD配置和排故虚拟主机</li>
+<li>:triangular_flag_on_post:配置Apache HTTPD HTTPS</li>
+<li>:triangular_flag_on_post:使用Nginx配置一个Web服务器</li>
+<li>自动化配置Web服务器</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><code>当存在虚拟主机时，第一个虚拟主机会覆盖默认的web站点</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">TYPE</th>
+<th align="center">PKG</th>
+<th align="center">URL</th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">http</td>
+<td align="center">httpd</td>
+<td align="center"><a target="_blank" rel="noopener" href="http://www0.lab.example.com/">http://www0.lab.example.com</a></td>
+<td align="center">基于<code>名称</code>的虚拟主机</td>
+<td align="center">80</td>
+</tr>
+<tr>
+<td align="center">vhost</td>
+<td align="center">httpd</td>
+<td align="center"><a target="_blank" rel="noopener" href="http://webapp0.lab.example.com/">http://webapp0.lab.example.com</a></td>
+<td align="center">基于<code>名称</code>的虚拟主机</td>
+<td align="center">80</td>
+</tr>
+<tr>
+<td align="center">https</td>
+<td align="center">mod_ssl</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://www0.lab.example.com/">https://www0.lab.example.com</a></td>
+<td align="center">基于<code>端口</code>的虚拟主机</td>
+<td align="center">443</td>
+</tr>
+<tr>
+<td align="center">permission</td>
+<td align="center">http_manual</td>
+<td align="center"><a target="_blank" rel="noopener" href="http://www0.lab.example.com/manual">http://www0.lab.example.com/manual</a></td>
+<td align="center">权限</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">密文</th>
+<th align="center">明文</th>
+<th align="center">公钥</th>
+<th align="center">私钥</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">https</td>
+<td align="center">http + ssl</td>
+<td align="center">*.crt public &#x2F; Lock</td>
+<td align="center">*.key private &#x2F; Key</td>
+</tr>
+<tr>
+<td align="center">ssh</td>
+<td align="center">telnet</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">优点</th>
+<th align="center">缺点</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">apache</td>
+<td align="center">稳定</td>
+<td align="center">组件多，重量</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">nginx</td>
+<td align="center">反向代理，轻量</td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="9-调整Web服务器流量"><a href="#9-调整Web服务器流量" class="headerlink" title="9 调整Web服务器流量"></a>9 调整Web服务器流量</h2><blockquote>
+<ul>
+<li>使用Varnish缓存静态内容</li>
+<li>使用HAProxy终止HTTPS流量和配置负载均衡</li>
+<li>自动化调整Web服务</li>
+</ul>
+</blockquote>
+<h2 id="10-提前基于文件的网络存储"><a href="#10-提前基于文件的网络存储" class="headerlink" title="10 提前基于文件的网络存储"></a>10 提前基于文件的网络存储</h2><blockquote>
+<ul>
+<li>导出NFS文件系统</li>
+<li>提供SMB文件共享</li>
+<li>自动化提供文件存储</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center">Windows</th>
+<th align="center">Linux</th>
+<th align="center">TYPE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">NAS</td>
+<td align="center">Network Attached Storage</td>
+<td align="center">网络附加存储</td>
+<td align="center">samba(SMB)</td>
+<td align="center">nfs</td>
+<td align="center">dir</td>
+</tr>
+<tr>
+<td align="center">SAN</td>
+<td align="center">Storage Area Network</td>
+<td align="center">存储区域网络</td>
+<td align="center">target &#x2F; iSCSI</td>
+<td align="center"></td>
+<td align="center">block</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">SERVICE</th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">NAS&#x2F; directory</td>
+<td align="center">samba</td>
+<td align="center">nfs</td>
+</tr>
+<tr>
+<td align="center">OS</td>
+<td align="center">windows</td>
+<td align="center">Like Unix</td>
+</tr>
+<tr>
+<td align="center">Permission</td>
+<td align="center">user</td>
+<td align="center">ip, network, hostname, domain</td>
+</tr>
+<tr>
+<td align="center">conf</td>
+<td align="center">&#x2F;etc&#x2F;samba&#x2F;smb.cfg</td>
+<td align="center">&#x2F;etc&#x2F;exports</td>
+</tr>
+<tr>
+<td align="center">sharename</td>
+<td align="center">[custom]</td>
+<td align="center">&#x2F;path</td>
+</tr>
+<tr>
+<td align="center">Pkg</td>
+<td align="center">samba &#x2F; DAEMON,<br> samba-common &#x2F; conf, <br>samba-client &#x2F; smbclient</td>
+<td align="center">nfs-utils</td>
+</tr>
+<tr>
+<td align="center">DAEMON</td>
+<td align="center">smb&#x2F;SERVICE, <br>nmb&#x2F;NAME</td>
+<td align="center">nfs-server &#x2F; RHEL&gt;&#x3D;7, <br>nfs &#x2F; RHEL&lt;7</td>
+</tr>
+<tr>
+<td align="center">firewall</td>
+<td align="center">samba</td>
+<td align="center">nfs -&#x3D;&gt; # mount,<br>[ port-mapper, mountd ] -&#x3D;&gt; $ showmount</td>
+</tr>
+<tr>
+<td align="center">Client-cmd</td>
+<td align="center">smbclient - like ftp interactive</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">filesystem</td>
+<td align="center">cifs (cifs-utils)</td>
+<td align="center">nfs</td>
+</tr>
+<tr>
+<td align="center">autofs</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Windows</th>
+<th align="center">Linux</th>
+<th align="center">QUOTA</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Local</td>
+<td align="center">ntfs</td>
+<td align="center">ext4, xfs</td>
+<td align="center">Y</td>
+</tr>
+<tr>
+<td align="center">Remote</td>
+<td align="center">cifs</td>
+<td align="center">nfs</td>
+<td align="center">N</td>
+</tr>
+</tbody></table>
+<h2 id="11-访问基于块的网络存储"><a href="#11-访问基于块的网络存储" class="headerlink" title="11 访问基于块的网络存储"></a>11 访问基于块的网络存储</h2><blockquote>
+<ul>
+<li>提供iSCSI存储</li>
+<li>访问iSCSI存储</li>
+<li>自动化配置iSCSI Initiator</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Client</th>
+<th align="center">Server</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">SAN &#x2F; block</td>
+<td align="center">iscsi</td>
+<td align="center">target</td>
+</tr>
+<tr>
+<td align="center">CMD</td>
+<td align="center">iscsiadm</td>
+<td align="center">targetcli &#x2F; ls</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">iscsiadm</td>
+<td align="center">block</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">lsblk</td>
+<td align="center">iscsi - block</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">fstab &#x2F; <code>_netdev</code></td>
+<td align="center">iscsi - port</td>
+</tr>
+<tr>
+<td align="center">acl</td>
+<td align="center">&#x2F;etc&#x2F;iscsi&#x2F;init*</td>
+<td align="center">iscsi - acl</td>
+</tr>
+<tr>
+<td align="center">True</td>
+<td align="center">iscsid</td>
+<td align="center">target</td>
+</tr>
+<tr>
+<td align="center">False</td>
+<td align="center">iscsi</td>
+<td align="center">targetd</td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># iscsiadm --mode session -P 3</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="A0-step"><a href="#A0-step" class="headerlink" title="A0. step"></a>A0. step</h3><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">word</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center"><kbd>Tab</kbd></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">man</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">echo $?</td>
+<td align="center">&#x3D;&#x3D; 0</td>
+</tr>
+</tbody></table>
+<h3 id="A1-红帽"><a href="#A1-红帽" class="headerlink" title="A1. 红帽"></a>A1. 红帽</h3><table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">URL</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">RH358</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.redhat.com/zh/services/training/rh358-red-hat-services-management-automation">红帽服务管理与自动化</a></td>
+<td align="center">课程代码</td>
+</tr>
+<tr>
+<td align="center">EX358</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.redhat.com/zh/services/training/ex358-red-hat-certified-specialist-services-management-automation-exam">红帽认证服务管理和自动化专家考试</a></td>
+<td align="center">考试代码</td>
+</tr>
+</tbody></table>
+<h3 id="A2-软件"><a href="#A2-软件" class="headerlink" title="A2. 软件"></a>A2. 软件</h3><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">VMware</td>
+<td>虚拟机</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://typora.io/">Typora</a></td>
+<td>Markdown</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Xmind</td>
+<td>思维导图</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Snipaste</td>
+<td>截图</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="A3-培训环境"><a href="#A3-培训环境" class="headerlink" title="A3. 培训环境"></a>A3. 培训环境</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> /etc/rht</span><br><span class="line">RHT_COURSE=rh358</span><br><span class="line">RHT_TITLE=<span class="string">&quot;Management and Automation of Linux Network Services (RH358)&quot;</span></span><br><span class="line">RHT_VMS=<span class="string">&quot;bastion workstation servera serverb serverc serverd &quot;</span></span><br><span class="line">RHT_VM0=<span class="string">&quot;classroom &quot;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">虚拟机</th>
+<th align="center">主机名</th>
+<th align="center">功能</th>
+<th align="center">必须</th>
+<th align="center">root</th>
+<th align="center">User</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">VMware</td>
+<td align="center">foundation</td>
+<td align="center">平台</td>
+<td align="center">1</td>
+<td align="center">Asimov</td>
+<td align="center">kiosk%redhat</td>
+</tr>
+<tr>
+<td align="center">KVM</td>
+<td align="center">classroom</td>
+<td align="center">功能服务器</td>
+<td align="center">1</td>
+<td align="center">Asimov</td>
+<td align="center">instructor%Asimov</td>
+</tr>
+<tr>
+<td align="center">KVM</td>
+<td align="center">bastion</td>
+<td align="center">router</td>
+<td align="center">1</td>
+<td align="center">redhat</td>
+<td align="center">student%student</td>
+</tr>
+<tr>
+<td align="center">KVM</td>
+<td align="center">workstation</td>
+<td align="center">GUI</td>
+<td align="center">0</td>
+<td align="center">redhat</td>
+<td align="center">student%student</td>
+</tr>
+<tr>
+<td align="center">KVM</td>
+<td align="center">server{a..d}</td>
+<td align="center">CLI</td>
+<td align="center">0</td>
+<td align="center">redhat</td>
+<td align="center">student%student</td>
+</tr>
+</tbody></table>
+<p><strong>[kiosk@foundation]</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ rht-vmctl start classroom</span><br><span class="line">$ rht-vmctl start bastion</span><br><span class="line">$ rht-vmctl start workstation</span><br><span class="line">$ rht-vmctl start servera</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ping -c 4 workstation</span><br><span class="line">$ ssh root@workstation</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">ls</span> /content/slides/</span><br></pre></td></tr></table></figure>
+
+<h3 id="A4-yaml"><a href="#A4-yaml" class="headerlink" title="A4. yaml"></a>A4. yaml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ansible-doc -l | grep keyword</span><br><span class="line">$ ansible-doc module-name</span><br><span class="line">/EX</span><br><span class="line"></span><br><span class="line">$ ansible-playbook x.yml</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li><code>---</code>第一行</li>
+<li>使用<code>缩进</code>表示层级关系，<code>:</code>上一级以冒号结尾</li>
+<li>只允许<code>空格</code>，缩进不允许使用tab</li>
+<li>缩进的空格数不重要，只要相同层级的元素左对齐即可</li>
+<li><code>#</code>表示注释</li>
+<li><code>key</code>:空格<code>value</code></li>
+</ul>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tail -n 1 /etc/bashrc</span></span><br><span class="line"><span class="comment"># vim</span></span><br><span class="line">:<span class="built_in">set</span> all</span><br><span class="line">:<span class="built_in">help</span> tabstop</span><br><span class="line"></span><br><span class="line"><span class="comment"># ls /etc/vimrc ~/.vimrc</span></span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cat</span> &gt; ~/.vimrc &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">set number ts=2 sw=2 et</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="A5-service"><a href="#A5-service" class="headerlink" title="A5. service"></a>A5. service</h3><table>
+<thead>
+<tr>
+<th align="center">STEP</th>
+<th>CMD</th>
+<th>COMMENT</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td>nmcli | nmtui</td>
+<td>网络</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>hostnamectl</td>
+<td>主机名</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>yum search KEYWORD</td>
+<td>查安装包名</td>
+<td>dns</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>yum -y install PKG</td>
+<td>安装软件</td>
+<td>bind</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>rpm -qc PKG | man -k nfs</td>
+<td>查配置文件</td>
+<td>bind</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td>vim &#x2F;etc&#x2F;..cfg(sec_service)</td>
+<td>编辑(安全1&#x2F;4)</td>
+<td>&#x2F;etc&#x2F;named.conf</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td>rpm -ql PKG | grep service<br>systemctl list-unit-files | grep KEYWORD</td>
+<td>查守护进程</td>
+<td>bind</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td>systemctl enable –now DAEMON<br>systemctl restart DAEMON</td>
+<td>开机自启，立即启动</td>
+<td>named</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td>firewall-cmd –permanent …, <br>–reload(sec_port)</td>
+<td>防火墙(安全1&#x2F;4)</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td></td>
+<td>文件系统(安全1&#x2F;4)</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td></td>
+<td>SELinux(安全1&#x2F;4)</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="A6-OBJECTIVE-SCORE"><a href="#A6-OBJECTIVE-SCORE" class="headerlink" title="A6. OBJECTIVE: SCORE"></a>A6. OBJECTIVE: SCORE</h3><blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Manage Network Services: 87%</span><br><span class="line">Manage Firewall Services: 100%</span><br><span class="line">Manage SELinux: 100%</span><br><span class="line">Manage DNS: 0%</span><br><span class="line">Manage DHCP: 100%</span><br><span class="line">Manage printers: 33%</span><br><span class="line">Manage Email services: 100%</span><br><span class="line">Manage a MariaDB database server: 100%</span><br><span class="line">Manage HTTPD web access: 100%</span><br><span class="line">Manage iSCSI: 50%</span><br><span class="line">Manage NFS: 100%</span><br><span class="line">Manage SMB: 75%</span><br><span class="line">Use Ansible to Configure Standard Services: 80%</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="A7-学习技巧"><a href="#A7-学习技巧" class="headerlink" title="A7. 学习技巧"></a>A7. 学习技巧</h3><blockquote>
+<ul>
+<li><p>word</p>
+</li>
+<li><p><kbd>Tab</kbd> 补全,<kbd>Tab</kbd><kbd>Tab</kbd> 列出 </p>
+</li>
+<li><p>&#96;&#96;&#96;bash</p>
+</li>
+</ul>
+<h1 id="man-command"><a href="#man-command" class="headerlink" title="man command"></a>man command</h1>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ```bash</span><br><span class="line">  # echo $?</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="A8-VMware-software"><a href="#A8-VMware-software" class="headerlink" title="A8. VMware+software"></a>A8. VMware+software</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum -y install \</span></span><br><span class="line">open-vm-tools-desktop.x86_64 \</span><br><span class="line">xorg-x11-drv-vmware.x86_64</span><br></pre></td></tr></table></figure>
+
+<h3 id="A9-ansible"><a href="#A9-ansible" class="headerlink" title="A9. ansible"></a>A9. ansible</h3><p><strong>[student@workstation]</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ yum search ansible</span><br><span class="line">$ yum list ansible</span><br><span class="line"></span><br><span class="line">$ rpm -qc ansible</span><br><span class="line">/etc/ansible/ansible.cfg</span><br><span class="line">/etc/ansible/hosts</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">head</span> /etc/ansible/ansible.cfg</span><br><span class="line">$ <span class="built_in">mkdir</span> playbook</span><br><span class="line">$ <span class="built_in">cp</span> /etc/ansible/ansible.cfg playbook/ansible.cfg</span><br><span class="line">$ <span class="built_in">cd</span> playbook/</span><br><span class="line">$ ansible --version</span><br><span class="line"></span><br><span class="line">$ vim /home/student/playbook/ansible.cfg</span><br><span class="line">...</span><br><span class="line">inventory      = /home/student/playbook/inventory</span><br><span class="line">$ <span class="built_in">cp</span> /etc/ansible/hosts inventory</span><br><span class="line">$ ansible-inventory --graph</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>module</strong></p>
+<ul>
+<li>stat(when)</li>
+<li>debug(echo)</li>
+<li>setup(facts)</li>
+<li>shell(*,|)</li>
+<li>command(id, hostname)</li>
+</ul>
+</blockquote>
+<h3 id="A10-vim"><a href="#A10-vim" class="headerlink" title="A10. vim"></a>A10. vim</h3><table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td><kbd>u</kbd></td>
+<td>Undo</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td><kbd>5</kbd><kbd>g</kbd><kbd>g</kbd></td>
+<td>Go</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td><kbd>Ctrl</kbd>-<kbd>V</kbd></td>
+<td>Virtual block</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td><kbd>j</kbd>* n</td>
+<td>:arrow_down:</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td><kbd>I</kbd></td>
+<td>III12iii<u>3</u>aaa456AAA</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td><kbd>Esc</kbd></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td><kbd>o</kbd></td>
+<td>Open</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td><kbd>x</kbd></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="A11-培训环境-2-练习环境"><a href="#A11-培训环境-2-练习环境" class="headerlink" title="A11. 培训环境 2 练习环境"></a>A11. 培训环境 2 练习环境</h3><blockquote>
+<p>VMware</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ark.intel.com/">CPU</a> * 8</li>
+<li>MEM * 8G</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">STEP</th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">VMware 第一次运行时</td>
+<td align="center">选择<code>已移动</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">物理机 vmnet1</td>
+<td align="center">172.25.254.<code>1</code>&#x2F;24</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">X:\&gt; <code>ping 172.25.254.250</code></td>
+<td align="center">物理机：确认和 foundation连网</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">X:\&gt; <code>scp YOURPATH/ex358.rar kiosk@172.25.254.250:~</code></td>
+<td align="center">物理机：拷贝文件</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">$ <code>unzip ex358.zip</code></td>
+<td align="center">解压缩</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">$ <code>bash ex358/exam-setup.sh</code></td>
+<td align="center">开始布署，约6分钟</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center"># <code>systemctl shudown</code></td>
+<td align="center">关机</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center"></td>
+<td align="center">做快照，名称<code>EX358</code></td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center"></td>
+<td align="center">开机</td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ rht-vmctl status classroom</span><br><span class="line">classroom RUNNING</span><br><span class="line">$ rht-vmctl status all</span><br><span class="line">bastion DEFINED</span><br><span class="line">workstation DEFINED</span><br><span class="line">servera DEFINED</span><br><span class="line">serverb DEFINED</span><br><span class="line">serverc DEFINED</span><br><span class="line">serverd DEFINED</span><br><span class="line">$ rht-vmctl start bastion</span><br><span class="line"></span><br><span class="line">-CMD</span><br><span class="line">$ rht-vmctl start servera</span><br><span class="line">$ rht-vmctl start serverb</span><br><span class="line"></span><br><span class="line">-ANSIBLE</span><br><span class="line">$ rht-vmctl start workstation</span><br><span class="line">$ rht-vmctl start serverc</span><br><span class="line">$ rht-vmctl start serverd</span><br></pre></td></tr></table></figure>
+
+<h4 id="A12-PC-VMware"><a href="#A12-PC-VMware" class="headerlink" title="A12. PC+VMware"></a>A12. PC+VMware</h4><table>
+<thead>
+<tr>
+<th align="center">OS</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">win7</td>
+<td>VMware-workstation-full-15.5.7</td>
+<td>1、删除快照<br>2、改兼容性<br>3、改CPU+MEM</td>
+</tr>
+<tr>
+<td align="center">win&gt;&#x3D;8</td>
+<td>VMware-workstation-full-16.1.2</td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>CPU: AMD</p>
+<p>foundation 8.0 +RH358<br>foundation 8.2</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://lnsslimbo.github.io">LNSS</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lnsslimbo.github.io/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH358/">https://lnsslimbo.github.io/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH358/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lnsslimbo.github.io" target="_blank">The place of trash</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-CL210/"><img class="next-cover" src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">RHCA学习笔记|CL210</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/lnsslimbo/cdn@img%2Bvideo/blogimg/lnss.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LNSS</div><div class="author-info__description">江枫渔火对愁眠</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lnsslimbo"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">可知岁月|敬浮生</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Red-Hat-Services-Management-and-Automation"><span class="toc-number">1.</span> <span class="toc-text">Red Hat Services Management and Automation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%AE%A1%E7%90%86%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.1.</span> <span class="toc-text">1 管理网络服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Controlling-Network-Services"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">Controlling Network Services</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Configuring-Network-Interfaces"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">Configuring Network Interfaces</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E5%AF%BC%E7%BB%83%E4%B9%A0-%E8%87%AA%E5%8A%A8%E5%8C%96%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%92%8C%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.1.0.3.</span> <span class="toc-text">指导练习: 自动化配置服务和网络接口</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E7%BD%91%E7%BB%9C%E8%81%9A%E5%90%88-%E9%85%8D%E7%BD%AE%E7%BD%91%E7%BB%9CTeam"><span class="toc-number">1.2.</span> <span class="toc-text">2 配置网络聚合 配置网络Team</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%AE%A1%E7%90%86DNS%E5%92%8CDNS%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.3.</span> <span class="toc-text">3 管理DNS和DNS服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS%EF%BC%88domain-name-system%EF%BC%89%E6%A6%82%E5%BF%B5"><span class="toc-number">1.3.1.</span> <span class="toc-text">DNS（domain name system）概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS%E4%BD%9C%E7%94%A8"><span class="toc-number">1.3.2.</span> <span class="toc-text">DNS作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E7%A9%BA%E9%97%B4%E6%9C%BA%E6%9E%84"><span class="toc-number">1.3.3.</span> <span class="toc-text">域名空间机构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS%E6%9F%A5%E8%AF%A2%E8%BF%87%E7%A8%8B"><span class="toc-number">1.3.4.</span> <span class="toc-text">DNS查询过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS%E6%9F%A5%E8%AF%A2%E8%BF%87%E7%A8%8B-1"><span class="toc-number">1.3.5.</span> <span class="toc-text">DNS查询过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS%E8%B5%84%E6%BA%90%E8%AE%B0%E5%BD%95"><span class="toc-number">1.3.6.</span> <span class="toc-text">DNS资源记录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%AE%A1%E7%90%86DHCP%E5%92%8CIP%E5%9C%B0%E5%9D%80%E5%88%86%E9%85%8D"><span class="toc-number">1.4.</span> <span class="toc-text">4 管理DHCP和IP地址分配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%AE%A1%E7%90%86%E6%89%93%E5%8D%B0%E6%9C%BA%E5%92%8C%E6%89%93%E5%8D%B0%E6%96%87%E4%BB%B6"><span class="toc-number">1.5.</span> <span class="toc-text">5 管理打印机和打印文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%85%8D%E7%BD%AE%E9%82%AE%E4%BB%B6%E4%BC%A0%E8%BE%93"><span class="toc-number">1.6.</span> <span class="toc-text">6 配置邮件传输</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E9%85%8D%E7%BD%AEMariaDB-SQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.7.</span> <span class="toc-text">7 配置MariaDB SQL数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E9%85%8D%E7%BD%AEWeb%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.8.</span> <span class="toc-text">8 配置Web服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E8%B0%83%E6%95%B4Web%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%81%E9%87%8F"><span class="toc-number">1.9.</span> <span class="toc-text">9 调整Web服务器流量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E6%8F%90%E5%89%8D%E5%9F%BA%E4%BA%8E%E6%96%87%E4%BB%B6%E7%9A%84%E7%BD%91%E7%BB%9C%E5%AD%98%E5%82%A8"><span class="toc-number">1.10.</span> <span class="toc-text">10 提前基于文件的网络存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E8%AE%BF%E9%97%AE%E5%9F%BA%E4%BA%8E%E5%9D%97%E7%9A%84%E7%BD%91%E7%BB%9C%E5%AD%98%E5%82%A8"><span class="toc-number">1.11.</span> <span class="toc-text">11 访问基于块的网络存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95"><span class="toc-number">1.12.</span> <span class="toc-text">附录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#A0-step"><span class="toc-number">1.12.1.</span> <span class="toc-text">A0. step</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A1-%E7%BA%A2%E5%B8%BD"><span class="toc-number">1.12.2.</span> <span class="toc-text">A1. 红帽</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A2-%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.12.3.</span> <span class="toc-text">A2. 软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A3-%E5%9F%B9%E8%AE%AD%E7%8E%AF%E5%A2%83"><span class="toc-number">1.12.4.</span> <span class="toc-text">A3. 培训环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A4-yaml"><span class="toc-number">1.12.5.</span> <span class="toc-text">A4. yaml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A5-service"><span class="toc-number">1.12.6.</span> <span class="toc-text">A5. service</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A6-OBJECTIVE-SCORE"><span class="toc-number">1.12.7.</span> <span class="toc-text">A6. OBJECTIVE: SCORE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A7-%E5%AD%A6%E4%B9%A0%E6%8A%80%E5%B7%A7"><span class="toc-number">1.12.8.</span> <span class="toc-text">A7. 学习技巧</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#man-command"><span class="toc-number">2.</span> <span class="toc-text">man command</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#A8-VMware-software"><span class="toc-number">2.0.1.</span> <span class="toc-text">A8. VMware+software</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A9-ansible"><span class="toc-number">2.0.2.</span> <span class="toc-text">A9. ansible</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A10-vim"><span class="toc-number">2.0.3.</span> <span class="toc-text">A10. vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A11-%E5%9F%B9%E8%AE%AD%E7%8E%AF%E5%A2%83-2-%E7%BB%83%E4%B9%A0%E7%8E%AF%E5%A2%83"><span class="toc-number">2.0.4.</span> <span class="toc-text">A11. 培训环境 2 练习环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A12-PC-VMware"><span class="toc-number">2.0.4.1.</span> <span class="toc-text">A12. PC+VMware</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH358/" title="RHCA学习笔记|RH358"><img src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RHCA学习笔记|RH358"/></a><div class="content"><a class="title" href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH358/" title="RHCA学习笔记|RH358">RHCA学习笔记|RH358</a><time datetime="2022-07-12T10:52:40.000Z" title="发表于 2022-07-12 18:52:40">2022-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-CL210/" title="RHCA学习笔记|CL210"><img src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RHCA学习笔记|CL210"/></a><div class="content"><a class="title" href="/2022/07/12/RHCA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-CL210/" title="RHCA学习笔记|CL210">RHCA学习笔记|CL210</a><time datetime="2022-07-12T10:52:23.000Z" title="发表于 2022-07-12 18:52:23">2022-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/RHCE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH294/" title="RHCE学习笔记|RH294"><img src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RHCE学习笔记|RH294"/></a><div class="content"><a class="title" href="/2022/07/12/RHCE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH294/" title="RHCE学习笔记|RH294">RHCE学习笔记|RH294</a><time datetime="2022-07-12T10:46:05.000Z" title="发表于 2022-07-12 18:46:05">2022-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/RHCE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH134/" title="RHCE学习笔记|RH134"><img src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RHCE学习笔记|RH134"/></a><div class="content"><a class="title" href="/2022/07/12/RHCE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH134/" title="RHCE学习笔记|RH134">RHCE学习笔记|RH134</a><time datetime="2022-07-12T10:45:31.000Z" title="发表于 2022-07-12 18:45:31">2022-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/RHCE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH124/" title="RHCE学习笔记|RH124"><img src="https://s2.loli.net/2022/07/12/x2DObVMGC8k954p.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RHCE学习笔记|RH124"/></a><div class="content"><a class="title" href="/2022/07/12/RHCE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-RH124/" title="RHCE学习笔记|RH124">RHCE学习笔记|RH124</a><time datetime="2022-07-12T10:41:50.000Z" title="发表于 2022-07-12 18:41:50">2022-07-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By LNSS</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
