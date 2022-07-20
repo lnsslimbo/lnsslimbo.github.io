@@ -1206,7 +1206,7 @@ setTimeout(function(){preloader.endLoading();}, 5000);</script><div class="js-pj
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: 'prj_di93HoY1klTntw5injKnSNlqr2zv',
+      envId: 'https://my-twikoo-hexo.vercel.app/',
       region: '',
       onCommentLoaded: function () {
         btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
@@ -1218,7 +1218,7 @@ setTimeout(function(){preloader.endLoading();}, 5000);</script><div class="js-pj
     const countELement = document.getElementById('twikoo-count')
     if(!countELement) return
     twikoo.getCommentsCount({
-      envId: 'prj_di93HoY1klTntw5injKnSNlqr2zv',
+      envId: 'https://my-twikoo-hexo.vercel.app/',
       region: '',
       urls: [window.location.pathname],
       includeReply: false
